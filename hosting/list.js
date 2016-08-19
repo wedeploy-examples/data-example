@@ -6,9 +6,22 @@ WeDeploy
 	.sort('id', 'desc')
 	.get()
 	.then(function(response) {
-		console.info('Tasks:', response.body());
+		appendTasks(response.body());
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
 
-		var tasks = response.body();
+	WeDeploy
+		.url('http://data.datademo.wedeploy.me/tasks/')
+		.limit(5)
+		.sort('id', 'desc')
+		.watch()
+		.on('changes', function(tasks) {
+			appendTasks(tasks);
+		});
+
+	function appendTasks(tasks) {
 		var taskList = '';
 
 		tasks.forEach(function(task) {
@@ -16,7 +29,4 @@ WeDeploy
 		});
 
 		list.innerHTML = taskList;
-	})
-	.catch(function(error) {
-		console.error(error);
-	});
+	}
