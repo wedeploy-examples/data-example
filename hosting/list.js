@@ -1,32 +1,31 @@
 var list = document.querySelector('.list');
 
-WeDeploy
-	.url('http://data.datademo.wedeploy.me/tasks/')
-	.limit(5)
-	.sort('id', 'desc')
-	.get()
+WeDeploy.data('http://data.datademo.wedeploy.me')
+  .orderBy('id', 'desc')
+  .limit(5)
+  .get('tasks')
 	.then(function(response) {
-		appendTasks(response.body());
+		appendTasks(response);
 	})
 	.catch(function(error) {
 		console.error(error);
 	});
 
-	WeDeploy
-		.url('http://data.datademo.wedeploy.me/tasks/')
-		.limit(5)
-		.sort('id', 'desc')
-		.watch()
-		.on('changes', function(tasks) {
-			appendTasks(tasks);
-		});
+WeDeploy
+	.data('http://data.datademo.wedeploy.me')
+	.limit(5)
+	.orderBy('id', 'desc')
+	.watch('tasks')
+	.on('changes', function(tasks) {
+		appendTasks(tasks);
+	});
 
-	function appendTasks(tasks) {
-		var taskList = '';
+function appendTasks(tasks) {
+	var taskList = '';
 
-		tasks.forEach(function(task) {
-			taskList += `<input type="text" value="${task.name}" readonly>`;
-		});
+	tasks.forEach(function(task) {
+		taskList += `<input type="text" value="${task.name}" readonly>`;
+	});
 
-		list.innerHTML = taskList;
-	}
+	list.innerHTML = taskList;
+}
