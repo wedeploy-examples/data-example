@@ -12,7 +12,7 @@ WeDeploy.data('http://data.boilerplate-data.wedeploy.io')
 	});
 
 WeDeploy
-	.data('http://data.boilerplate-auth.wedeploy.io')
+	.data('http://data.boilerplate-data.wedeploy.io')
 	.limit(5)
 	.orderBy('id', 'desc')
 	.watch('tasks')
