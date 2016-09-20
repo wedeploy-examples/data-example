@@ -1,6 +1,6 @@
 var list = document.querySelector('.list');
 
-WeDeploy.data('http://data.datademo.wedeploy.me')
+WeDeploy.data('http://data.boilerplate-auth.wedeploy.io')
   .orderBy('id', 'desc')
   .limit(5)
   .get('tasks')
@@ -12,7 +12,7 @@ WeDeploy.data('http://data.datademo.wedeploy.me')
 	});
 
 WeDeploy
-	.data('http://data.datademo.wedeploy.me')
+	.data('http://data.boilerplate-auth.wedeploy.io')
 	.limit(5)
 	.orderBy('id', 'desc')
 	.watch('tasks')

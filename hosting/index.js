@@ -3,7 +3,7 @@ var form = document.querySelector('form');
 form.addEventListener('submit', function(e) {
 	e.preventDefault();
 
-	WeDeploy.data('http://data.datademo.wedeploy.me')
+	WeDeploy.data('http://data.boilerplate-auth.wedeploy.io')
     .create('tasks', {name: form.item.value })
 		.then(function(response) {
 			form.reset();
