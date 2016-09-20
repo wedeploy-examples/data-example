@@ -1,6 +1,6 @@
 var list = document.querySelector('.list');
 
-WeDeploy.data('http://data.boilerplate-auth.wedeploy.io')
+WeDeploy.data('http://data.boilerplate-data.wedeploy.io')
   .orderBy('id', 'desc')
   .limit(5)
   .get('tasks')
