@@ -29,6 +29,8 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
 
         tableView.dataSource = self
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		tableView.tableFooterView = UIView()
+		tableView.separatorColor = .mainColor
 		
 		WeDeploy.data("http://data.boilerplate-data.wedeploy.io")
 			.orderBy(field: "id", order: .DESC)
@@ -63,7 +65,14 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 		cell.textLabel?.text = todos[indexPath.row]
+		cell.textLabel?.font = UIFont.weFont(ofSize: 17)
+		cell.textLabel?.textAlignment = .center
+		cell.selectionStyle = .none
 		
 		return cell
+	}
+	
+	@IBAction func goBack() {
+		self.navigationController?.popViewController(animated: true)
 	}
 }
