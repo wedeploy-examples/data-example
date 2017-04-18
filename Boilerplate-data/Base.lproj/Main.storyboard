@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-do list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTL-XG-lQs">
-                                <rect key="frame" x="103" y="120" width="170.5" height="75"/>
+                                <rect key="frame" x="102.5" y="120" width="170.5" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="0Y9-l8-bXE"/>
                                 </constraints>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="60" id="XdT-Kp-cp8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <state key="normal" title="Log in"/>
+                                <state key="normal" title="Add to do"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="darkButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -152,7 +152,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Arn-0m-tCa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LBI-6C-QvZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LBI-6C-QvZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
