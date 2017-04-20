@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center|top"
+		android:orientation="vertical"
+		>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="80dp"
+			android:text="@string/to_do_list"
+			android:textAppearance="@style/WeTextAppearance.Large"
+			/>
+
+		<android.support.v7.widget.RecyclerView
+			android:layout_marginTop="20dp"
+			android:id="@+id/todo_list"
+			android:layout_width="match_parent"
+			android:layout_height="320dp"
+			/>
+
+		<TextView
+			android:id="@+id/go_to_home"
+			android:layout_width="wrap_content"
+			android:layout_marginTop="10dp"
+			android:textColor="@color/colorAccent"
+			android:layout_height="wrap_content"
+			android:text="@string/back_to_home"
+			android:textAlignment="center"
+			/>
+
+	</LinearLayout>
+</layout>
+

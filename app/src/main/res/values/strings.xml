@@ -1,0 +1,10 @@
+<resources>
+	<string name="app_name">Boilerplate-data</string>
+	<string name="to_do_list">To-do List</string>
+	<string name="todoedit_hint">Buy milk</string>
+	<string name="add_item">Add item</string>
+	<string name="item_description">Item description</string>
+	<string name="go_to_item_listing">Go to item listing</string>
+	<string name="title_activity_to_do_list">ToDoListActivity</string>
+	<string name="back_to_home">Back to home</string>
+</resources>
