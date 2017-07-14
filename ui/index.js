@@ -3,8 +3,9 @@ var form = document.querySelector('form');
 form.addEventListener('submit', function(e) {
 	e.preventDefault();
 
-WeDeploy.data('http://data.boilerplate-data.wedeploy.io')
-    .create('tasks', {name: form.item.value })
+	WeDeploy
+		.data('data-boilerplatedata.wedeploy.io')
+		.create('tasks', {name: form.item.value })
 		.then(function(response) {
 			form.reset();
 			form.item.focus();
