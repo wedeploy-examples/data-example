@@ -56,7 +56,7 @@ public class AddToDoActivity extends AppCompatActivity {
 		} catch (JSONException e) {
 		}
 
-		weDeploy.data("http://data.boilerplate-data.wedeploy.io")
+		weDeploy.data("https://data-boilerplatedata.wedeploy.sh")
 			.create("tasks", jsonObject)
 			.execute(new Callback() {
 				@Override

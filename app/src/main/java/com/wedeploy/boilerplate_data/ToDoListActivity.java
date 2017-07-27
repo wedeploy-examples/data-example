@@ -21,7 +21,7 @@ import org.json.JSONException;
 
 public class ToDoListActivity extends AppCompatActivity {
 
-	private static final String DATA_URL = "http://data.boilerplate-data.wedeploy.io";
+	private static final String DATA_URL = "https://data-boilerplatedata.wedeploy.sh";
 
 	private ToDoAdapter adapter;
 	private List<String> todos = new ArrayList<>();
