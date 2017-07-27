@@ -30,7 +30,7 @@ class AddToDoViewController: UIViewController {
 		guard let todo = toDoTextField.text,
 			!todo.isEmpty else { return }
 		
-		WeDeploy.data("http://data.boilerplate-data.wedeploy.io")
+		WeDeploy.data("https://data-boilerplatedata.wedeploy.sh")
 			.create(resource: "tasks", object: ["name" : todo])
 			.toCallback { objectCreated, error in
 				if let objectCreated = objectCreated {
