@@ -1,9 +1,10 @@
 var list = document.querySelector('.list');
 
-WeDeploy.data('http://data.boilerplate-data.wedeploy.io')
-  .orderBy('id', 'desc')
-  .limit(5)
-  .get('tasks')
+WeDeploy
+	.data('data-boilerplatedata.wedeploy.io')
+	.orderBy('id', 'desc')
+	.limit(5)
+	.get('tasks')
 	.then(function(response) {
 		appendTasks(response);
 	})
@@ -12,7 +13,7 @@ WeDeploy.data('http://data.boilerplate-data.wedeploy.io')
 	});
 
 WeDeploy
-	.data('http://data.boilerplate-data.wedeploy.io')
+	.data('data-boilerplatedata.wedeploy.io')
 	.limit(5)
 	.orderBy('id', 'desc')
 	.watch('tasks')
