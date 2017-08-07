@@ -4,7 +4,7 @@ form.addEventListener('submit', function(e) {
 	e.preventDefault();
 
 	WeDeploy
-		.data('data-boilerplatedata.wedeploy.io')
+		.data('db-boilerplatedata.wedeploy.io')
 		.create('tasks', {name: form.item.value })
 		.then(function(response) {
 			form.reset();

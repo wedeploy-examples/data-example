@@ -1,3 +1,4 @@
 {
+	"id": "db",
 	"image": "wedeploy/data:0.0.1"
 }
